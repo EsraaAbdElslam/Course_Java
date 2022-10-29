@@ -1,9 +1,10 @@
 package EX11_01;
 public class Triangle extends GeometricObject {
-    protected double side1;
-    protected double side2;
-    protected double side3;
-    
+
+    private double side1;
+    private double side2;
+    private double side3;
+
     Triangle(){
         this(1.0, 1.0, 1.0);
     }
@@ -22,7 +23,7 @@ public class Triangle extends GeometricObject {
         return side3;
     }
 
-    
+
     protected double getArea (){
         double p = getPerimeter() / 2;
         double area = (p * (p - side1) * (p - side2) * (p - side3));
@@ -32,9 +33,9 @@ public class Triangle extends GeometricObject {
         return side1 + side2 + side3;
     }
     public String toString(){
-        return super.toString() + "\nTriangle : side1 = " + side1 
-                + ", side2 = " + side2 
-                + ", side3 = " + side3;  
+        return super.toString() + "\nTriangle : side1 = " + side1
+                + ", side2 = " + side2
+                + ", side3 = " + side3;
     }
 }
 
